@@ -12,7 +12,7 @@ class App():
         self.text = ttk.Label(self.mainframe, text='Üdv Koma!', font=("Fira Code Medium", 20), justify='center')
         self.text.grid(row=0, column=0, columnspan=10, pady=(0, 10))
 
-        #Celsius to Farenheit converter
+        #Celsius to Fahrenheit converter
         self.input_field_c = ttk.Entry(self.mainframe, justify='center', width=10)
         self.input_field_c.grid(row=1, column=0, padx=(30,0))
         
@@ -28,7 +28,7 @@ class App():
         self.celsius = ttk.Label(self.mainframe, text='°F')
         self.celsius.grid(row=2, column=1)
 
-        #Farenheit to Celsius converter
+        #Fahrenheit to Celsius converter
         self.input_field_f = ttk.Entry(self.mainframe, justify='center', width=10)
         self.input_field_f.grid(row=1, column=3, padx=(30, 0))
 
@@ -68,8 +68,8 @@ class App():
         self.output_field_f.config(text= '{:.1f}' .format(celsius * 1.8 + 32))
 
     def f_to_c_convert(self):
-        farenheit = float(self.input_field_f.get())
-        self.output_field_c.config(text= '{:.3f}' .format((farenheit - 32) / 1.8) )
+        fahrenheit = float(self.input_field_f.get())
+        self.output_field_c.config(text= '{:.3f}' .format((fahrenheit - 32) / 1.8) )
 
     def convert(self):
         converted = float(self.temp_unit_input.get())
