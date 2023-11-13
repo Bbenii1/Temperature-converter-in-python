@@ -74,9 +74,9 @@ class App():
     def convert(self):
         converted = float(self.temp_unit_input.get())
         if self.temp_unit.get() == 'C°':
-            self.output.config(text= '{:.1f}' .format(converted * 1.8 + 32))
+            self.output.config(text= '{:.1f} °F' .format(converted * 1.8 + 32))
         elif self.temp_unit.get() == '°F':
-            self.output.config(text= '{:.3f}' .format((converted - 32) / 1.8) )
+            self.output.config(text= '{:.3f} C°' .format((converted - 32) / 1.8) )
 
         
 if __name__ == '__main__':
