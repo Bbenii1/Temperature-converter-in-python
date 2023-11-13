@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
+import decimal
+from decimal import *
 
 class App():
     def __init__(self):
@@ -10,7 +12,7 @@ class App():
         self.mainframe.pack(fill='both', expand='true')
         
         self.text = ttk.Label(self.mainframe, text='Üdv Koma!', font=("Fira Code Medium", 20), justify='center')
-        self.text.grid(row=0, column=0, columnspan=10, pady=(0, 10))
+        self.text.grid(row=0, column=0, columnspan=100, pady=(0, 10))
 
         #Celsius to Fahrenheit converter
         self.input_field_c = ttk.Entry(self.mainframe, justify='center', width=10)
@@ -65,18 +67,18 @@ class App():
     
     def c_to_f_convert(self):
         celsius = float(self.input_field_c.get())
-        self.output_field_f.config(text= '{:.1f}' .format(celsius * 1.8 + 32))
+        self.output_field_f.config(text= '{}' .format(round((celsius * 1.8 + 32),2)))
 
     def f_to_c_convert(self):
         fahrenheit = float(self.input_field_f.get())
-        self.output_field_c.config(text= '{:.3f}' .format((fahrenheit - 32) / 1.8) )
+        self.output_field_c.config(text= '{}' .format(round(((fahrenheit - 32) / 1.8),2)))
 
     def convert(self):
-        converted = float(self.temp_unit_input.get())
+        converted = int(self.temp_unit_input.get())
         if self.temp_unit.get() == 'C°':
-            self.output.config(text= '{:.1f} °F' .format(converted * 1.8 + 32))
+            self.output.config(text= '{} °F' .format(round((converted * 1.8 + 32),3)))
         elif self.temp_unit.get() == '°F':
-            self.output.config(text= '{:.3f} C°' .format((converted - 32) / 1.8) )
+            self.output.config(text= '{} C°' .format(round(((converted - 32) / 1.8),3)))
 
         
 if __name__ == '__main__':
