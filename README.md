@@ -3,4 +3,4 @@ Basic temperature converter with GUI that is completely written in python and ca
 # Is Python installed?
 Make sure that you have <a href="https://www.python.org/downloads/">Python</a> installed.
 # Download
-Then download the latest python file from the <a href="https://github.com/Bbenii1/Temperature-converter-in-python-with-GUI/releases">release</a> page.
+Then download the latest python file from the <a href="https://github.com/Bbenii1/Temperature-converter-in-python-with-GUI/releases">releases</a> page.
