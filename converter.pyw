@@ -3,7 +3,7 @@ from tkinter import ttk
 import decimal
 from decimal import *
 
-class App():
+class TempConvert():
     def __init__(self):
         self.root = tk.Tk()
         self.root.geometry('320x150')
@@ -44,8 +44,6 @@ class App():
         fahrenheit = float(self.input_field_f.get())
         self.output_field_c.config(text= '{}' .format(round(((fahrenheit - 32) / 1.8),2)))
 
-
-
     def convert(self):
         converted = int(self.temp_unit_input.get())
             
@@ -67,7 +65,6 @@ class App():
         elif self.temp_unit.get() == 'K' and self.temp_to.get() == '°F':
             self.output.config(text= converted * 1.8 -459.67)
 
-
     def modify(self):
         if self.temp_unit.get() == 'C°':
             self.temp_to.config(value=['','°F', 'K'])
@@ -83,6 +80,6 @@ class App():
 
     def empty(self):
         self.temp_to.set('')
-
+     
 if __name__ == '__main__':
-    App()
+    TempConvert()
